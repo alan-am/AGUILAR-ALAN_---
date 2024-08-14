@@ -1,0 +1,26 @@
+[2024-08-13 17:05:23] [ INFO ] [Main:7] [main] Hola
+[2024-08-13 18:48:04] [ ERROR] [OdontologoServiceTest:29] [cargarTablas] Error de Sintaxis en sentencia SQL "\000d\000aCREATE TABLE ODONTOLOGOS(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMATRICULA INT NOT NULL,\000d\000aNOMBRE VARCHAR(50) NOT NULL,\000d\000aAPELLIDO VARCHAR(50) NOT NULL,\000d\000a[*])"; se esperaba "identifier"
+Syntax error in SQL statement "\000d\000aCREATE TABLE ODONTOLOGOS(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMATRICULA INT NOT NULL,\000d\000aNOMBRE VARCHAR(50) NOT NULL,\000d\000aAPELLIDO VARCHAR(50) NOT NULL,\000d\000a[*])"; expected "identifier"; SQL statement:
+
+CREATE TABLE ODONTOLOGOS(
+ID INT AUTO_INCREMENT PRIMARY KEY,
+MATRICULA INT NOT NULL,
+NOMBRE VARCHAR(50) NOT NULL,
+APELLIDO VARCHAR(50) NOT NULL,
+) [42001-230]
+[2024-08-13 18:50:19] [ INFO ] [OdontologoDaoH2:21] [guardar] Se ha establecido conexion con la DB H2 para guardar
+[2024-08-13 18:50:19] [ INFO ] [OdontologoDaoH2:29] [guardar] Los cambios han sido ejecutados con exito
+[2024-08-13 18:50:19] [ ERROR] [OdontologoDaoH2:48] [guardar] Hubo un problema, se hizo un rollback a la transaccion
+[2024-08-13 18:50:19] [ ERROR] [OdontologoDaoH2:58] [guardar] Metodo permitido unicamente en un query. Use execute ó executeUpdate en lugar de executeQuery
+Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+INSERT INTO ODONTOLOGOS VALUES(DEFAULT,?,?,?) [90002-230]
+[2024-08-13 18:52:11] [ INFO ] [OdontologoDaoH2:21] [guardar] Se ha establecido conexion con la DB H2 para guardar
+[2024-08-13 18:52:11] [ INFO ] [OdontologoDaoH2:29] [guardar] Los cambios han sido ejecutados con exito
+[2024-08-13 18:52:11] [ INFO ] [OdontologoDaoH2:41] [guardar] Odontologo/a guardado correctamente: Odontologo{id=3, matricula=202003, nombre='PEPITO', apellido='GONZALES'}
+[2024-08-13 19:11:47] [ INFO ] [OdontologoDaoH2:90] [listarTodos] []
+[2024-08-13 19:11:47] [ INFO ] [OdontologoDaoH2:90] [listarTodos] [Odontologo{id=1, matricula=202407, nombre='JUAN', apellido='PEREZ'}]
+[2024-08-13 19:12:45] [ INFO ] [OdontologoDaoH2:90] [listarTodos] []
+[2024-08-13 19:12:45] [ INFO ] [OdontologoDaoH2:90] [listarTodos] [Odontologo{id=1, matricula=202407, nombre='JUAN', apellido='PEREZ'}]
+[2024-08-13 19:14:14] [ INFO ] [OdontologoDaoH2:90] [listarTodos] Odontologo{id=1, matricula=202407, nombre='JUAN', apellido='PEREZ'}
+[2024-08-13 19:14:14] [ INFO ] [OdontologoDaoH2:90] [listarTodos] Odontologo{id=2, matricula=202012, nombre='MARCELO', apellido='BRAVO'}
+[2024-08-13 19:30:27] [ INFO ] [OdontologoDaoMemory:21] [guardar] Odontologo{id=1, matricula=202003, nombre='PEPITO', apellido='GONZALES'}
